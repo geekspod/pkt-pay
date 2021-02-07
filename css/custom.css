@@ -1,0 +1,91 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.staticSection {
+    background-color: #6cabeb;
+    background-image: url(../images/asset-one.png);
+    background-repeat: no-repeat;
+    background-size: 521px;
+    background-position: right 110px;
+}
+.staticSection h1 {
+    max-width: 252px;
+}
+.staticSection p {
+    max-width: 400px;
+}
+.headerLogo {
+    margin-top: 55px;
+    margin-left: 40px;
+    margin-bottom: 450px;
+}
+.dynamicSection {
+    background-color: #f7f7fa;
+}
+.billOptions .card {
+    text-align: center;
+    margin-bottom: 32px !important;
+}
+.billOptions .card img {
+    height: 94px;
+    margin-bottom: 23px;
+}
+.card {
+    padding-top: 35px;
+    padding-bottom: 23px;
+    border-color: #171637 !important;
+    -webkit-box-shadow: 8px 8px 0px 8px #171637;
+    border: solid 1px; 
+    box-shadow: 8px 8px 0px 8px #171637;
+    border-radius: 18px;
+}
+.card h5 {
+    margin-bottom: 0px;
+}
+.recentCards .card {
+    margin-bottom: 48px !important;
+    padding-top: 25px;
+}
+.recentCards .card p.card-text {
+    padding-left: 50px;
+}
+.recentCards .card .card-header {
+    background-repeat: no-repeat;
+    background-position: 20px 0px;
+    background-color: transparent;
+    border-bottom: 0px;
+    padding-left: 68px;
+    padding-top: 0px;
+    padding-bottom: 6px;
+}
+.cableCard .card-header {
+    background-image: url(../images/asset-two.png);
+    background-repeat: no-repeat;
+    background-position: 10px 0px;
+}
+h2 {
+    margin-bottom: 25px;
+}
+h3 {
+    margin-top: 18px;
+}
+.billStatus {
+    padding-top: 50px;
+}
+.billStatus .col-md-4 div {
+    border-bottom: solid 3px black;
+    margin-bottom: 48px;
+}
+
+/* 2nd Page */
+
+.selectBillUsers {
+    text-align: center;
+}
