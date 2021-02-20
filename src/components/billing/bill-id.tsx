@@ -64,21 +64,23 @@ export const BillIDComponent = ( props: RouteComponentProps ) => {
                 </div>
                 </div>
                 <div className="row selectBillUsers">
-                
-                {
-                    Billing.IDs.map((v: IBillingId) => (
-                        <div className="col-md-3" key={v.uid} onClick={() => clickIssuerID(v.uid)}>
-                            <div
-                            className="card border-primary mb-3"
-                            style={{ maxWidth: '100%', boxShadow: `8px 8px 0px 8px ${v.uid == billing.issuerID ? 'green': '#171637'}` }}>
-                            <div className="card-body text-primary">
-                                <img src={v.icon} />
-                                <h5 className="card-title">{v.title}</h5>
-                            </div>
-                            </div>
-                        </div>
-                    ))
-                }
+                    <div className="row m-0">
+                        {
+                            Billing.IDs.map((v: IBillingId) => (
+                                <div className="col-md-3 mb-3" key={v.uid} onClick={() => clickIssuerID(v.uid)}>
+                                    <div
+                                    className="card border-primary mb-3"
+                                    style={{ maxWidth: '100%', boxShadow: `3px 3px 0px 5px ${v.uid == billing.issuerID ? 'green': '#171637'}` }}>
+                                    <div className="card-body text-primary">
+                                        <img src={v.icon} />
+                                        <h5 className="card-title" style={{ fontWeight: 100}}>{v.title}</h5>
+                                    </div>
+                                    </div>
+                                </div>
+                            ))
+                        }
+
+                    </div>
                 
                 </div>
             </div>

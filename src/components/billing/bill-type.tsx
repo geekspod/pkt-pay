@@ -37,37 +37,42 @@ export const BillTypeComponent = (props: RouteComponentProps) => {
                 <div className="col-md-12"><h2>Bill Options</h2></div>
               </div>
               <div className="row billOptions">
-                {
-                    Billing.Types.map((v: IBillingType) => (
-                        <div className="col-md-6" key={v.uid} onClick={() => selectType(v.uid)}>
-                            <div className="card border-primary mb-3" style={{ maxWidth: '100%', boxShadow: `8px 8px 0px 8px ${v.uid == billing.billType ? 'green': '#171637'}` }}>
-                                <div className="card-body text-primary">
-                                    <img src={v.icon} />
-                                    <h5 className="card-title">{ v.title }</h5>
-                                </div>
-                            </div>
-                        </div>
-                    ))
-                }
+                <div className="row m-0">
+                  {
+                      Billing.Types.map((v: IBillingType) => (
+                          <div className="col-md-6" key={v.uid} onClick={() => selectType(v.uid)}>
+                              <div className="card border-primary mb-3" style={{ maxWidth: '100%', boxShadow: `3px 3px 0px 5px ${v.uid == billing.billType ? 'green': '#171637'}` }}>
+                                  <div className="card-body text-primary">
+                                      <img src={v.icon} />
+                                      <h5 className="card-title">{ v.title }</h5>
+                                  </div>
+                              </div>
+                          </div>
+                      ))
+                  }
+                </div>
               </div>
               <div className="row">
                 <div className="col-md-12"><h3>Recents</h3></div>
               </div>
               <div className="row recentCards">
-                
-                {
-                    Billing.RecentTypes.map((v: IBillingType) => (
-                        <div className="col-md-4" key={v.uid} onClick={() => selectType(v.uid)}>
-                            <div className="card border-primary mb-3 cableCard" style={{ maxWidth: '100%', boxShadow: `8px 8px 0px 8px ${v.uid == billing.billType ? 'green': '#171637'}` }}>
-                                <div className="card-header">{v.title}</div>
-                                <div className="card-body text-primary">
-                                    <p className="card-text">$25</p>
-                                </div>
-                            </div>
-                        </div>
-                    ))
-                }
-                
+                <div className="row col-12">
+                  
+                  {
+                      Billing.RecentTypes.map((v: IBillingType) => (
+                          <div className="col-md-4" key={v.uid} onClick={() => selectType(v.uid)}>
+                              <div className="card border-primary mb-3 cableCard" style={{ maxWidth: '100%', boxShadow: `3px 3px 0px 5px ${v.uid == billing.billType ? 'green': '#171637'}` }}>
+                                  <div className="card-header">{v.title}</div>
+                                  <div className="card-body text-primary">
+                                      <p className="card-text">$25</p>
+                                  </div>
+                              </div>
+                          </div>
+                      ))
+                  }
+                  
+
+                </div>
               </div>
             </div>
             </div>

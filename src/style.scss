@@ -46,9 +46,9 @@ p {
   padding-top: 35px;
   padding-bottom: 23px;
   border-color: #171637 !important;
-  -webkit-box-shadow: 8px 8px 0px 8px #171637;
+  -webkit-box-shadow: 3px 3px 0px 5px #171637;
   border: solid 1px; 
-  box-shadow: 8px 8px 0px 8px #171637;
+  box-shadow: 3px 3px 0px 5px #171637;
   border-radius: 18px;
 }
 .card h5 {
@@ -86,7 +86,7 @@ h3 {
   padding-top: 50px;
 }
 .billStatus .col-md-4 div {
-  border-bottom: solid 3px black;
+  border-bottom: solid 3px #E9E8E9;
   margin-bottom: 48px;
 }
 
@@ -96,5 +96,11 @@ h3 {
   text-align: center;
 }
 .active-border {
-  border-color: #007bff !important;
+  border-color: #202145 !important;
+}
+.card-title {
+  color: #202145;
+}
+input {
+  box-shadow: #202145 3px 3px 0px 5px !important;
 }
