@@ -37,7 +37,7 @@ export const PayBillComponent = ( props: RouteComponentProps ) => {
               <h2>Enter Amount</h2>
               <form>
                 <div className="form-group">
-                  <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search Issuer" />
+                  <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Bill Amount in USD" />
                 </div>
               </form>
             </div>

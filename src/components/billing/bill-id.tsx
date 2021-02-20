@@ -63,7 +63,7 @@ export const BillIDComponent = ( props: RouteComponentProps ) => {
                     </form>
                 </div>
                 </div>
-                <div className="row selectBillUsers">
+                <div className="row selectBillUsers mt-3">
                     <div className="row m-0">
                         {
                             Billing.IDs.map((v: IBillingId) => (
@@ -72,8 +72,8 @@ export const BillIDComponent = ( props: RouteComponentProps ) => {
                                     className="card border-primary mb-3"
                                     style={{ maxWidth: '100%', boxShadow: `3px 3px 0px 5px ${v.uid == billing.issuerID ? 'green': '#171637'}` }}>
                                     <div className="card-body text-primary">
-                                        <img src={v.icon} />
-                                        <h5 className="card-title" style={{ fontWeight: 100}}>{v.title}</h5>
+                                        <img src={v.icon} className="w-18px"/>
+                                        <p className="card-title issuer-title" style={{ fontWeight: 100}}>{v.title}</p>
                                     </div>
                                     </div>
                                 </div>
