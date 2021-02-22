@@ -109,3 +109,11 @@ input {
 .issuer-title {
   letter-spacing: 0px;
 }
+.selection-box {
+  max-width: 100%;
+  box-shadow: 5px 5px 0px 0px #171637;
+}
+.selected-box {
+  border-color: green !important;
+  box-shadow: 5px 5px 0px 0px green;
+}
