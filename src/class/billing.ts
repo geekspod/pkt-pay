@@ -28,6 +28,7 @@ const types = [
 
 const ids = [1,1,1,1,1,1,1,1].map((v: any, index: number) => ({
     uid: v4(),
+    id: index+1,
     title: `Issuer # ${index + 1}`,
     icon: images.two
 }));

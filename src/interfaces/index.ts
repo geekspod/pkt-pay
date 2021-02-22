@@ -7,6 +7,7 @@ export interface IBillingType {
 
 export interface IBillingId {
     uid: string
+    id: number
     title: string
     icon: any
 }

@@ -8,9 +8,10 @@ import { BillingLeftSideComponent } from "./bill-left";
 
 export const BillIDComponent = ( props: RouteComponentProps ) => {
     const [ billID, setBillID ] = useState<string>('');
+    const [ filteredIssuers, setFilteredIssuers ] = useState<Array<IBillingId>>(Billing.IDs)
+
     const billing = useSelector((state: IStore) => state.billing);
     const dispatch = useDispatch();
-    console.log(billing);
     
     useEffect(() => {
         if (!billing.billType) props.history.goBack();
@@ -22,11 +23,16 @@ export const BillIDComponent = ( props: RouteComponentProps ) => {
         dispatch(selectIssuerID(id))
     }
     
-    const submitForm = () => {
+    const submitForm = (e: any) => {
+        e.preventDefault();
+        if (!billID.trim()) return alert('Please enter bill ID.')
         dispatch(selectBillID(billID))
         props.history.push('/pay-bill')
     }
 
+    const searchBillIDs = (input: ChangeEvent<HTMLInputElement>) => {
+        setFilteredIssuers(Billing.IDs.filter((v: IBillingId) => String(v.id).includes(input.target.value)))
+    }
 
     return (
         <div className="">
@@ -58,15 +64,16 @@ export const BillIDComponent = ( props: RouteComponentProps ) => {
                         id="exampleInputEmail1"
                         aria-describedby="emailHelp"
                         placeholder="Search Issuer"
+                        onChange={searchBillIDs}
                         />
                     </div>
                     </form>
                 </div>
                 </div>
                 <div className="row selectBillUsers mt-3">
-                    <div className="row m-0">
+                    <div className="row m-0 w-100">
                         {
-                            Billing.IDs.map((v: IBillingId) => (
+                            filteredIssuers.map((v: IBillingId) => (
                                 <div className="col-md-3 mb-3" key={v.uid} onClick={() => clickIssuerID(v.uid)}>
                                     <div
                                     className="card border-primary mb-3"
