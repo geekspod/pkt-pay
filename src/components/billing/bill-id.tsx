@@ -77,7 +77,7 @@ export const BillIDComponent = ( props: RouteComponentProps ) => {
                                 <div className="col-md-3 mb-3" key={v.uid} onClick={() => clickIssuerID(v.uid)}>
                                     <div
                                     className="card border-primary mb-3"
-                                    style={{ maxWidth: '100%', boxShadow: `3px 3px 0px 5px ${v.uid == billing.issuerID ? 'green': '#171637'}` }}>
+                                    style={{ maxWidth: '100%', boxShadow: `5px 5px 0px 0px ${v.uid == billing.issuerID ? 'green': '#171637'}` }}>
                                     <div className="card-body text-primary">
                                         <img src={v.icon} className="w-18px"/>
                                         <p className="card-title issuer-title" style={{ fontWeight: 100}}>{v.title}</p>

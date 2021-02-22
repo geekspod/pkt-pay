@@ -41,7 +41,7 @@ export const BillTypeComponent = (props: RouteComponentProps) => {
                   {
                       Billing.Types.map((v: IBillingType) => (
                           <div className="col-md-6" key={v.uid} onClick={() => selectType(v.uid)}>
-                              <div className="card border-primary mb-3" style={{ maxWidth: '100%', boxShadow: `3px 3px 0px 5px ${v.uid == billing.billType ? 'green': '#171637'}` }}>
+                              <div className="card border-primary mb-3" style={{ maxWidth: '100%', boxShadow: `5px 5px 0px 0px ${v.uid == billing.billType ? 'green': '#171637'}` }}>
                                   <div className="card-body text-primary">
                                       <img src={v.icon} />
                                       <h5 className="card-title">{ v.title }</h5>
@@ -61,7 +61,7 @@ export const BillTypeComponent = (props: RouteComponentProps) => {
                   {
                       Billing.RecentTypes.map((v: IBillingType) => (
                           <div className="col-md-4" key={v.uid} onClick={() => selectType(v.uid)}>
-                              <div className="card border-primary mb-3 cableCard" style={{ maxWidth: '100%', boxShadow: `3px 3px 0px 5px ${v.uid == billing.billType ? 'green': '#171637'}` }}>
+                              <div className="card border-primary mb-3 cableCard" style={{ maxWidth: '100%', boxShadow: `5px 5px 0px 0px ${v.uid == billing.billType ? 'green': '#171637'}` }}>
                                   <div className="card-header">{v.title}</div>
                                   <div className="card-body text-primary">
                                       <p className="card-text">$25</p>
